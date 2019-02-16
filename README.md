@@ -18,3 +18,5 @@ Index page
 <br/>
 A basic function of this panel is to let you check weather the server is up and running like this:
 ![Alt text](https://github.com/sersdyh/Web-panel-for-CineCubes/blob/master/demo-images/monitor_server_status.png?raw=true "Title")
+Original Act of a cube query
+![Alt text](https://github.com/sersdyh/Web-panel-for-CineCubes/blob/master/demo-images/original-act.png?raw=true "Title")
