@@ -14,6 +14,7 @@ What is CineCubes? (from CineCubes page)
 
 ## Demo of the panel
 Index page
-![alt text](https://raw.githubusercontent.com/sersdyh/Web-panel-for-CineCubes/blob/master/demo-images/index_page.png)
+![Alt text](https://github.com/sersdyh/Web-panel-for-CineCubes/blob/master/demo-images/index_page.png?raw=true "Title")
+<br/>
 A basic function of this panel is to let you check weather the server is up and running like this:
-
+![Alt text](https://github.com/sersdyh/Web-panel-for-CineCubes/blob/master/demo-images/monitor_server_status.png?raw=true "Title")
