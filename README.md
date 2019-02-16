@@ -1,4 +1,5 @@
 # CineCubes Web Client (Diploma thesis)
+Contributors: Kwnstantinos Spyrakhs
 ## Description
 Web based client for CineCubes java application (https://github.com/DAINTINESS-Group/CinecubesPublic).
 <br/>
