@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="img/cube_dali.png">
+
+        <title>Cinecubes Detailed Report</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/custom.css">
+        <link rel="stylesheet" href="styles/waves.min.css">
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- load D3js -->
+        <script src="//d3plus.org/js/d3.js"></script>
+        <!-- load D3plus after D3js -->
+        <script src="//d3plus.org/js/d3plus.js"></script>
+
+        <!-- load js scripts from js folder -->
+        <script type="text/javascript" src="js/scroll-navbar.js"></script>
+        <script type="text/javascript" src="js/toggle-sidebar.js"></script>
+        <script type="text/javascript" src="js/waves.min.js"></script>
+        <script type="text/javascript" src="js/waves-attach.js"></script>
+        <script type="text/javascript" src="js/more-details.js"></script>
+
+    </head>
+    <body>
+        <div id="content">
+            <h2 class="text-center" id="clientID">Client ID: </h2>
+            <div class="container">
+                <button type="button" class="btn btn-primary btn-md" id="refreshEpisodesButton"><span class="glyphicon glyphicon-refresh"></span> Refresh</button>
+                <br><br/>
+                <br><br/>
+                <nav id="detailsNav">
+                    <ul id="detailsList" class="nav nav-tabs">
+                        <li class="nav-item active" id="act1">
+                            <a class="nav-link">Act 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Act 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Summary</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="detailsContent">
+                    <div id="graphWell" class="well">
+                        <div id="act1Tables"></div>
+                        <div class="inner" id="appendNodes"></div>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

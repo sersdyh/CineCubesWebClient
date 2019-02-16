@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="img/cube_dali.png">
+
+        <title>Cinecubes Panel</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/custom.css">
+        <link rel="stylesheet" href="styles/waves.min.css">
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- load js scripts from js folder -->
+        <script type="text/javascript" src="js/scroll-navbar.js"></script>
+        <script type="text/javascript" src="js/toggle-sidebar.js"></script>
+        <script type="text/javascript" src="js/server-status.js"></script>
+        <script type="text/javascript" src="js/waves.min.js"></script>
+        <script type="text/javascript" src="js/waves-attach.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="text-center">
+                        <img src="img/user-icon.png" class="img1">
+                        <h4>CinecubesUser</h4>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components">
+                        <li>
+                            <a href="index.html">Cinecubes Home</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Monitor Server Status</a>
+                        </li>
+                        <li>
+                            <a href="create_ini.html">Create .ini file</a>
+                        </li>
+                        <li>
+                            <a href="graphs.html">Visualize Results</a>
+                        </li>
+                        <li>
+                            <a href="user_settings.html">Settings</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="http://www.cs.uoi.gr/~pvassil/projects/cinecubes/" class="article" target="_blank">Cinecubes info page</a></li>
+                    <li><a href="https://github.com/DAINTINESS-Group/CinecubesPublic" class="article" target="_blank">Cinecubes github</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-header">
+                                <button type="button" id="sidebar-toggle" class="btn btn-info navbar-btn btn-sm">
+                                    <i class="glyphicon glyphicon-list"></i>
+                                </button>
+                            </div>
+                            <div id="t1" class="text1">
+                                Cinecubes&#160Panel
+                            </div>
+                        </div>
+                </nav>
+                <h2>Server Status</h2>
+                <p><big>This page monitors Cinecube's server status. Click server status button to show status.</big></p>
+                <hr><br></br>
+                <div id="nest-cont">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Server Status</div>
+                        <div id="panel-content" class="panel-body"><font color="#ff0000">Waiting to fetch data...</font></div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-md" id="statusButton">server status</button>
+            </div>
+        </div>
+    </body>
+</html>

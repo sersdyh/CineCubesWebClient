@@ -1,0 +1,3 @@
+@echo %off
+echo starting api...
+npm start

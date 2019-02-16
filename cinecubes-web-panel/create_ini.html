@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="img/cube_dali.png">
+
+        <title>Cinecubes Panel</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/custom.css">
+        <link rel="stylesheet" href="styles/waves.min.css">
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- load js scripts from js folder -->
+        <script type="text/javascript" src="js/scroll-navbar.js"></script>
+        <script type="text/javascript" src="js/toggle-sidebar.js"></script>
+        <script type="text/javascript" src="js/register-ini.js"></script>
+        <script type="text/javascript" src="js/waves.min.js"></script>
+        <script type="text/javascript" src="js/waves-attach.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="text-center">
+                        <img src="img/user-icon.png" class="img1">
+                        <h4>CinecubesUser</h4>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components">
+                        <li>
+                            <a href="index.html">Cinecubes Home</a>
+                        </li>
+                        <li>
+                            <a href="server_status.html">Monitor Server Status</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Create .ini file</a>
+                        </li>
+                        <li>
+                            <a href="graphs.html">Visualize Results</a>
+                        </li>
+                        <li>
+                            <a href="user_settings.html">Settings</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="http://www.cs.uoi.gr/~pvassil/projects/cinecubes/" class="article" target="_blank">Cinecubes info page</a></li>
+                    <li><a href="https://github.com/DAINTINESS-Group/CinecubesPublic" class="article" target="_blank">Cinecubes github</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-header">
+                                <button type="button" id="sidebar-toggle" class="btn btn-info navbar-btn btn-sm">
+                                    <i class="glyphicon glyphicon-list"></i>
+                                </button>
+                            </div>
+                            <div id="t1" class="text1">
+                                Cinecubes&#160Panel
+                            </div>
+                        </div>
+                </nav>
+                <h2>Register new Cube</h2>
+                <p>This page is used to register new cubes for the Cinecubes system. The user can add parameters and download the .ini file.</p>
+                <hr>
+                <br></br>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <form>
+                            <div class="form-group">
+                                <label for="cname">Cube Name:</label>
+                                <input type="text" class="form-control" id="cname" placeholder="Cube Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Name:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="measure">Measure:</label>
+                                <input type="text" class="form-control" id="measure" placeholder="Measure">
+                            </div>
+                            <div class="form-group">
+                                <label for="gamma">Gamma:</label>
+                                <input type="text" class="form-control" id="gamma" placeholder="Gamma">
+                            </div>
+                            <div class="form-group">
+                                <label for="sigma">Sigma:</label>
+                                <input type="text" class="form-control" id="sigma" placeholder="Sigma">
+                            </div>
+                            <div class="form-group">
+                                <label for="aggrFunc" class="col-sm-3 control-label">Aggregate Function:</label>
+                                <div class="col-sm-3">
+                                    <select class="form-control" id="aggrFunc">
+                                        <option>--</option>
+                                        <option>AVG</option>
+                                        <option>COUNT</option>
+                                        <option>MIN</option>
+                                        <option>MAX</option>
+                                        <option>SUM</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" id="cubeRemoveButton" data-target="#cubeRemoveModal">- Cube</button>
+                            <div class="modal fade" id="cubeRemoveModal" tabindex="-1" role="dialog" aria-labelledby="cubeRemoveModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="cubeRemoveModalLabel">Remove Cube</h5>
+                                        </div>
+                                    <div class="modal-body">
+                                        <p>Are you sure?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal" id="cubeRemoveButtonConfirm">Confirm</button>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-sm" id="cubeAddButton">+ Cube</button>
+                        </form>
+                    </div>
+                    <div class="col-xs-6">
+                        <div id="nest-cont">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">Cube Preview</div>
+                                <div id="panel-content" class="panel-body">This panel is a preview for the cube .ini file.<br></br></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br></br>
+                <button type="button" class="btn btn-primary btn-md" data-toggle="modal" id="resetButton" data-target="#resetModal">Reset</button>
+                <div class="modal fade" id="resetModal" tabindex="-1" role="dialog" aria-labelledby="resetModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="resetModalLabel">Clear all data</h5>
+                            </div>
+                        <div class="modal-body">
+                            <p>Are you sure?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="resetButtonConfirm">Confirm</button>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary btn-md" id="downloadButton"><span class="glyphicon glyphicon-download-alt"></span> Download</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="img/cube_dali.png">
+
+        <title>Cinecubes Panel</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/custom.css">
+        <link rel="stylesheet" href="styles/waves.min.css">
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!-- load js scripts from js folder -->
+        <script type="text/javascript" src="js/scroll-navbar.js"></script>
+        <script type="text/javascript" src="js/toggle-sidebar.js"></script>
+        <script type="text/javascript" src="js/waves.min.js"></script>
+        <script type="text/javascript" src="js/waves-attach.js"></script>
+    </head>
+    <body>
+		
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="text-center">
+                        <img src="img/user-icon.png" class="img1">
+                        <h4>CinecubesUser</h4>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components">
+                        <li>
+                            <a href="index.html">Cinecubes Home</a>
+                        </li>
+                        <li>
+                            <a href="server_status.html">Monitor Server Status</a>
+                        </li>
+                        <li>
+                            <a href="create_ini.html">Create .ini file</a>
+                        </li>
+                        <li>
+                            <a href="graphs.html">Visualize Results</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Settings</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="http://www.cs.uoi.gr/~pvassil/projects/cinecubes/" class="article" target="_blank">Cinecubes info page</a></li>
+                    <li><a href="https://github.com/DAINTINESS-Group/CinecubesPublic" class="article" target="_blank">Cinecubes github</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-header">
+                                <button type="button" id="sidebar-toggle" class="btn btn-info navbar-btn btn-sm">
+                                    <i class="glyphicon glyphicon-list"></i>
+                                </button>
+                            </div>
+                            <div id="t1" class="text1">
+                                Cinecubes&#160Panel
+                            </div>
+                        </div>
+                </nav>
+                <h2>Settings</h2>
+                <hr><br></br>
+                <div class="well">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md">
+                                <form>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="text3" id="verinfo">Cinecubes Panel version: 0.0.1a</div><br></br>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="uname" class="text3">Username:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" class="form-control" id="uname" placeholder="username" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="apikey" class="text3">API Key:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" class="form-control" id="apikey" placeholder="api key" aria-describedby="change-apikey" readonly>
+                                        </div>
+                                        <div class="row">
+                                            <button type="button" id="change-apikey" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-refresh"></span> Reset</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="pwd" class="text3">Old Password:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" class="form-control" id="pwd" placeholder="password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <label for="npwd" class="text3">New Password:</label>
+                                        </div>
+                                        <div class="row">
+                                            <input type="text" class="form-control" id="npwd" placeholder="new password">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <button type="button" id="saveButton" class="btn btn-primary btn-md">Save</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

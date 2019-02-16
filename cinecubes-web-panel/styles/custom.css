@@ -1,0 +1,332 @@
+@import "https://fonts.googleapis.com/css?family=Calibri:300,400,500,600,700";
+
+/* general */
+body {
+    font-family: 'Calibri', sans-serif;
+    background: #fff;
+	padding-top: 50px;
+}
+
+p {
+    font-family: 'Calibri', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #000;
+}
+
+a {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, .5);
+}
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all .6s ease-in-out;
+}
+
+/* headers */
+h2 {
+    font-family: sans-serif;
+}
+h4 {
+    text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
+    text-align: center;
+    color: #f5f3f5;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+h5 {
+    font-size: 25px;
+}
+
+/* lines */
+hr {
+    border : 0;
+    height: 1px; 
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    margin: 5px 0;
+}
+
+/* img css */
+.img1 {
+    padding-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    width: 40%;
+}
+
+/* navbar */
+.navbar-default {
+    border: 0;
+    background-image: -webkit-linear-gradient(top, #01bcff 0%, #5b86e5 100%);
+    background-image: linear-gradient(to right, #01bcff 0%, #5b86e5 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffdfdfdf', GradientType=0);
+}
+
+/* sidebar */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #3f5c80;
+    color: #fff;
+    transition: all .5s;
+}
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar.sidebar-header {
+    padding: 20px;
+    background: #fff;
+}
+
+#sidebar ul.components {
+    padding: 10px 0;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+    display: block;
+}
+
+.active {
+    background-color: #01bcff;
+}
+#sidebar ul li a:visited, a:hover {
+    background-color: #01bcff;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+a.article {
+    background-color: #01bcff;
+}
+
+/* content */
+#content {
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* boostrap panel for status and cubes css */
+#content .panel-heading {
+    background: #0099cc;
+    color: #fff;
+}
+#content .panel {
+    padding: 0px;
+    overflow-y: scroll;
+    min-height: 40vh;
+    width: 110vh;
+    height: 100px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+/* when scrolling topside navbar */
+.fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 500ms linear;
+}
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 500ms, opacity 1s linear;
+}
+
+/* Cinecubes Panel text style */
+.text1 {
+    padding-left: 5px;
+    padding-top: 11px;
+    display: flex;
+    align-items: stretch;
+    font-size: 20px;
+    background: -webkit-linear-gradient(#0f0c29, #302b63);
+    -webkit-background-clip: text;
+}
+
+/* button css */
+.btn-primary {
+    background: #01bcff !important;
+}
+.btn-primary:hover {
+    color: #fff;
+    background: #01bbf0 !important;
+}
+.btn-primary:focus {
+    color: #fff;
+    background: #01bbf0 !important;
+}
+.btn-primary:visited {
+    color: #fff;
+    background: #01bbf0 !important;
+}
+.btn-primary:active {
+    color: #fff;
+    background: #01bbf0 !important;
+}
+
+/* reset button */
+#resetButton {
+    background-color: #ff4f0f !important;
+}
+#resetButton:hover {
+    background-color: #ff4000 !important;
+}
+#resetButton:focus {
+    background-color: #ff4000 !important;
+}
+#resetButton:visited {
+    background-color: #ff4000 !important;
+}
+#resetButton:active {
+    background-color: #ff4000 !important;
+}
+
+#resetButton2 {
+    background-color: #ff4f0f !important;
+}
+#resetButton2:hover {
+    background-color: #ff4000 !important;
+}
+#resetButton2:focus {
+    background-color: #ff4000 !important;
+}
+#resetButton2:visited {
+    background-color: #ff4000 !important;
+}
+#resetButton2:active {
+    background-color: #ff4000 !important;
+}
+#change-apikey {
+    background-color: #ff4000;
+    border-color: #fff;
+}
+
+/* ordered list css at index.html */
+#list1 {
+    width: 640px;
+}
+#list1 ol {
+    /*font-style: italic;*/
+    font-family: Arial, Helvetica, serif;
+    font-size: 20px;
+    color: #5b86e5; /* fallback for old browsers */
+    color: -webkit-linear-gradient(to right, #36d1dc, #5b86e5); /* Chrome 10-25, Safari 5.1-6 */
+    color: linear-gradient(to right, #36d1dc, #5b86e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#list1 ol li p {
+    padding: 8px;
+    font-style: normal;
+    font-family: Arial; font-size: 13px;
+    color: #000;
+    border-left: 1px
+    solid #999;
+}
+
+/* sidebar toggle button css */
+#sidebar-toggle {
+    color: #000;
+    background: #fff;
+}
+#sidebar-toggle:hover {
+    background: #f5f5f5;
+}
+
+.col-sm-3 {
+    padding-left: 0px;
+}
+
+/* forms for cube registration */
+.form-group {
+    padding-right: 30px;
+}
+
+/* style label text */
+.text3 {
+    font-weight: normal;
+}
+
+/* style bootstrap well */
+.well {
+    background-color: #fff;
+}
+
+/* bootstrap cards */
+.card {
+    position: relative;
+    /*display: inline-block;*/
+    background-color: #0099cc;
+    box-shadow: 0 3px 2px rgba(0, 0, 0, .25);
+    border-radius: 4px;
+}
+#cardTitleText {
+    color: #fff;
+}
+
+#secondlist ul li {
+    color: #000;
+    background-color: #fff;
+    transition: all .1s;
+}
+#secondlist .active {
+    background-color: #fff;
+}
+
+#detailsList ul li {
+    color: #000;
+    background-color: #fff;
+    transition: all .1s;
+}
+#detailsList .active {
+    background-color: #fff;
+}
+
+.modal-dialog {
+    padding-left: 30px;
+    width: 1000px;
+}
+
+/* data table styles */
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+/* mobile media queries */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}

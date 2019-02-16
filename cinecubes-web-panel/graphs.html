@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="img/cube_dali.png">
+
+        <title>Cinecubes Panel</title>
+
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="styles/custom.css">
+        <link rel="stylesheet" href="styles/waves.min.css">
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <!-- Bootstrap Js CDN -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- load D3js -->
+        <script src="//d3plus.org/js/d3.js"></script>
+        <!-- load D3plus after D3js -->
+        <script src="//d3plus.org/js/d3plus.js"></script>
+
+        <!-- load js scripts from js folder -->
+        <script type="text/javascript" src="js/scroll-navbar.js"></script>
+        <script type="text/javascript" src="js/toggle-sidebar.js"></script>
+        <script type="text/javascript" src="js/waves.min.js"></script>
+        <script type="text/javascript" src="js/waves-attach.js"></script>
+        <script type="text/javascript" src="js/execute-query.js"></script>
+        <script type="text/javascript" src="js/query.js"></script>
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <div class="text-center">
+                        <img src="img/user-icon.png" class="img1">
+                        <h4>CinecubesUser</h4>
+                    </div>
+                </div>
+
+                <ul class="list-unstyled components">
+                        <li>
+                            <a href="index.html">Cinecubes Home</a>
+                        </li>
+                        <li>
+                            <a href="server_status.html">Monitor Server Status</a>
+                        </li>
+                        <li>
+                            <a href="create_ini.html">Create .ini file</a>
+                        </li>
+                        <li class="active">
+                            <a href="#">Visualize Results</a>
+                        </li>
+                        <li>
+                            <a href="user_settings.html">Settings</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                </ul>
+
+                <ul class="list-unstyled CTAs">
+                    <li><a href="http://www.cs.uoi.gr/~pvassil/projects/cinecubes/" class="article" target="_blank">Cinecubes info page</a></li>
+                    <li><a href="https://github.com/DAINTINESS-Group/CinecubesPublic" class="article" target="_blank">Cinecubes github</a></li>
+                </ul>
+            </nav>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+                <nav class="navbar navbar-default navbar-fixed-top">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <div class="navbar-header">
+                                <button type="button" id="sidebar-toggle" class="btn btn-info navbar-btn btn-sm">
+                                    <i class="glyphicon glyphicon-list"></i>
+                                    <i class="fa fa-bars flat-icon"></i>
+                                </button>
+                            </div>
+                            <div id="t1" class="text1">
+                                Cinecubes&#160Panel
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <h2>Visualize Results from OLAP queries</h2>
+                <p><big>Here the user can create queries and see the results in detail with text reports as well as graphs:</big></p>
+                <hr>
+
+                <div class="container">
+                    <br>
+                    <button type="button" class="btn btn-primary btn-md" data-toggle="modal" id="createQuery" data-target="#createQueryModal">Create new Query</button>
+                    <div class="modal fade" id="createQueryModal" tabindex="-1" role="dialog" aria-labelledby="createQueryModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="createQueryModalLabel">Specify details of the query</h5>
+                                </div>
+                            <br>
+                            <nav id="queryForm">
+                                <div class="well">
+                                    <div class="modal-body">
+                                        <form id="queryTypeSelect">
+                                            <input class="queryTypeCheckbox" type="radio" value="stringQuery" name="query" checked>Execute Query from string <br>
+                                            <input class="queryTypeCheckbox" type="radio" value="fileQuery" name="query">Execute Query from file
+                                        </form>
+                                        <br>
+                                        <div id="stringOrFile">
+                                            <div class="row">
+                                                <form>
+                                                    <div class="form-group">
+                                                        <label for="cname">Cube Name:</label>
+                                                        <input type="text" class="form-control" id="cname" placeholder="Cube Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="name">Name:</label>
+                                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="aggrFunc" class="col-sm-3 control-label">Aggregate Function:</label>
+                                                        <div class="col-sm-3">
+                                                            <select class="form-control" id="aggrFunc">
+                                                                <option>--</option>
+                                                                <option>Avg</option>
+                                                                <option>Count</option>
+                                                                <option>Min</option>
+                                                                <option>Max</option>
+                                                                <option>Sum</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <br><br>
+                                                    <div class="form-group">
+                                                        <label for="measure">Measure:</label>
+                                                        <input type="text" class="form-control" id="measure" placeholder="Measure">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="gamma">Gamma:</label>
+                                                        <input type="text" class="form-control" id="gamma" placeholder="Gamma">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="sigma">Sigma:</label>
+                                                        <input type="text" class="form-control" id="sigma" placeholder="Sigma">
+                                                    </div>
+                                                </form>
+                                                <label for="selectTable"><p><big>Tables in selected database:</big></p></label>
+                                                <select class="form-control" id="selectTable" multiple></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="container col-md-12">
+                                <div class="col">
+                                    <label for="databaseSelection"><p><big>Using database:</big></p></label>
+                                    <select class="form-control" id="databaseSelection"></select>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary btn-md pull-left" data-toggle="modal" id="resetButton2">Reset</button>
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal" id="executeQueryConfirm">Execute Query</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br><hr></hr>
+                    <nav id="secondnav">
+                        <ul id="secondlist" class="nav nav-tabs">
+                            <li class="active"><a href="#" id="client1">Client 1</a></li>
+                        </ul>
+                    </nav>
+                    <div id="clientContent">
+                        <div id="graphWell" class="well">
+                            <div class="card-columns">
+                                <div class="card text-center" id="infoCard">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-center" id="cardTitleText">Info about query</h5>
+                                    </div>
+                                </div>
+                                <br>
+                            </div>
+                            <div class="text" id="t2">
+                                <h5 class="medium">CineCubes Report</h5>
+                                <div class="pull-right" id="moreDetailsDiv">
+                                    <button type="button" class="btn btn-primary btn-md" id="moreDetailsButton">More Details</button>
+                                </div>
+                                <p id="queryReport"></p>
+                            </div>
+                            <br/><h5>Table representation of original act data</h5>
+                            <p id="originalActText"></p>
+                            <div id="originalDataTable"></div>
+                            <!-- create container element for visualization -->
+                            <div id="selectViz"></div>
+                            <div id="viz"></div>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
