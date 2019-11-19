@@ -14,6 +14,7 @@ What is CineCubes? (from CineCubes page)
 4. Index page is at cinecubes-web-panel/index.html. Was tested using apache and mysql.
 
 ## Demo of the panel
+Click images to enlarg
 Index page
 ![Alt text](https://github.com/sersdyh/Web-panel-for-CineCubes/blob/master/demo-images/index_page.png?raw=true "Title")
 <br/>
