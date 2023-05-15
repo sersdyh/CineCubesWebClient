@@ -9,7 +9,7 @@ What is CineCubes? (from CineCubes page)
 
 ## Instalation and Usage
 1. Go to api folder and run npm install (must have node.js pre-installed).
-2. Replace CineCubes src folder you downloaded from CineCubers github page with the one existing here in CineCubes/src
+2. Replace CineCubes src folder you downloaded from CineCubes github page with the one existing here in CineCubes/src
 3. Have CineCubes server running from Cinecubes\src\mainengine\Server.java (check instructions in its github page for details to run).
 4. Index page is at cinecubes-web-panel/index.html. Was tested using apache and mysql.
 
